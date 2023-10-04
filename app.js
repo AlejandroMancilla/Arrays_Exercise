@@ -11,6 +11,7 @@ const btnOrdAge= document.getElementById('order-age');
 const btnOrdGender= document.getElementById('order-gender');
 const Lista = document.getElementById('list');
 const OrdLista = document.getElementById('order-list');
+const Title = document.createElement('h3');
 
 let personas = [];
 let OrdPersonas = [];
@@ -56,6 +57,7 @@ btnOrdName.addEventListener('click',function(){
     });
     console.table(personas);
     console.table(OrdPersonas);
+    Title.innerHTML = 'Lista Ordenada por Nombre';
     Actualizar(2);
 });
 
@@ -72,6 +74,7 @@ btnOrdGender.addEventListener('click',function(){
     });
     console.table(personas);
     console.table(OrdPersonas);
+    Title.innerHTML = 'Lista Ordenada por Genero';
     Actualizar(2);
 });
 
@@ -88,9 +91,9 @@ btnOrdAge.addEventListener('click',function(){
     });
     console.table(personas);
     console.table(OrdPersonas);
+    Title.innerHTML = 'Lista Ordenada por Edad';
     Actualizar(2);
 });
-
 
 
 function Actualizar(Lst){
@@ -117,8 +120,10 @@ function Actualizar(Lst){
 
     if(Lst == 1){   //Actualizar Lista No Ordenada
         //Crear Celdas con Array Personas
+        var Cont = 0        
         personas.forEach(function(x) {
             var Fila = document.createElement('tr');
+            Fila.id = 'F'+Cont
 
             var CeldaName = document.createElement('td');
             var TxtCelda = document.createTextNode(x.Name);
@@ -135,6 +140,7 @@ function Actualizar(Lst){
             
 
             TblBody.appendChild(Fila);
+            Cont++;
         });
         Tabla.appendChild(TblBody);
         Tabla.setAttribute('border', '2');
@@ -164,6 +170,7 @@ function Actualizar(Lst){
         Tabla.appendChild(TblBody);
         Tabla.setAttribute('border', '2');
         OrdLista.innerHTML = '';
+        OrdLista.appendChild(Title);
         OrdLista.appendChild(Tabla);
         sessionStorage.setItem('OrdPersonas',JSON.stringify(OrdPersonas));
     };
@@ -180,4 +187,3 @@ document.body.onload = function() {
         OrdPersonas = [];
     }
 };
-

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arrays Methods - App</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -17,50 +18,53 @@
         </div>
     </header>
 
-    <main>
-        <label for="nombre">Name</label>
-        <input type="text" name="nombre" id="name">
-        <label for="edad">Age</label>
-        <input type="text" name="edad" id="age">
-        <label for="sexo">Gender</label>
-        <select name="sexo" id="gender">
-            <option value="M">Masculino</option>
-            <option value="F">Femenino</option>
-            <option value="O">Otro</option>
-        </select>
-        <button id="add">ADD</button>
-
-    <section>
-        <div id="list">
-
-        </div>
-
-        <button id="reverse">Reverse</button>
-        <select name="opciones" id="clave">
-            <option value="Name">Name</option>
-            <option value="">Age</option>
-            <option value="">Gender</option>
-        </select>
-        <input type="text" placeholder="Busqueda" id="busqueda">
-        <button id="buscar">Search</button>
-    </section>
-
-    <section>
-        <button id="order-name">Order x Name</button>
-        <button id="order-age">Order x Age</button>
-        <button id="order-gender">Order x Gender</button>
-
-        <div id="order-list">
+    <div id="Contenido">
+        <section id="Ingreso">
+            <div id="Datos">
+                <label for="nombre">Name</label>
+                <input type="text" name="nombre" id="name">
+                <label for="edad">Age</label>
+                <input type="text" name="edad" id="age">
+                <label for="sexo">Gender</label>
+                <select name="sexo" id="gender">
+                    <option value="M">Masculino</option>
+                    <option value="F">Femenino</option>
+                    <option value="O">Otro</option>
+                </select>
+                <button id="add">ADD</button>
+            </div>
             
+    
+            <div id="list">
+    
+            </div>
+            <div style="flex-direction: row;">
+                <select name="opciones" id="clave">
+                    <option value="Name">Name</option>
+                    <option value="">Age</option>
+                    <option value="">Gender</option>
+                </select>
+                <input type="text" placeholder="Busqueda" id="busqueda">
+            </div>
+            <div style="display: flex; justify-content: center;">
+                <button id="buscar" style="width: 40%;">Search</button>
+            </div>
+        </section>
+           
+    
+        <section id="Botones">
+            <button id="reverse">Reverse</button>
+            <button id="order-name">Order x Name</button>
+            <button id="order-age">Order x Age</button>
+            <button id="order-gender">Order x Gender</button>
+    
+        </section>
+    
+        <div id="order-list">
+
         </div>
-
-    </section>
-
-
-    </main>
-
-
-
+    </div>
+    
     <footer>
         <p>Desarrolado por:
             <ol>
