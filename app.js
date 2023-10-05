@@ -39,7 +39,6 @@ btnBuscar.addEventListener('click',function(){
 });
 
 btnReverse.addEventListener('click',function(){
-
     OrdPersonas.reverse();
     Actualizar(2);
 });

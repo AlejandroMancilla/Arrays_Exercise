@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
 
 body{
     margin: 0;
@@ -14,36 +15,73 @@ body{
 header{
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 700px;
     width: 100%;
     height: 10%;
     background-color: #ff6600;
+    padding: 15px 0px;
 }
 
 h1,h2{
-    margin: 0;
+    margin: 0 50px;
     padding: 0;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Oswald', sans-serif;
     font-size: 30px;
-
+    text-align: center;
 }
 
-p,a,label{
+a,label{
     margin: 0;
     padding: 0;
     font-family: 'Cormorant Garamond', serif;
     font-size: 20px;
+    text-decoration: none;
 }
+
+p{
+    margin: 0;
+    padding: 10px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+a{
+    font-size: 25px;
+    color: #ff6600;
+}
+
+main{
+    padding: 20px;
+}
+
 
 footer{
-
-    position: absolute;
+    position: relative;
     background-color: #faa368;
+    bottom: 0;
     text-align: center;
     margin: 0;
-    height: 30px;
+    height: 50px;
     width: 100%;
 }
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #ececeb;
+    border-radius: 30px;
+    width: 40%;
+    align-items: center;
+    font-weight: bold;
+
+
+}
+.titulo{
+    margin-left:50px ;
+}
+
 
 #Contenido {
     display: flex;
@@ -114,4 +152,29 @@ select {
 
 table {
     width: 100%;
+}
+
+@media() {
+    
+}
+
+.language-javascript{
+    width: 90%;
+    margin: 0;
+    background-color: #f0b68f;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+#Sintaxis {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 10px;
+}
+
+.grid-item {
+    background-color: #f0b68f;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    text-align: center;
 }
