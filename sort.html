@@ -5,59 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arrays Methods - Sort</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <header>
         <h1>Arrays Methods</h1>
-        <div class="menu">
-        <a href="index.html">Inicio</a>
-        <a href="sort.html">Sort</a>
-        <a href="reverse.html">Reverse</a>
-        <a href="includes.html">Includes</a>
-        <a href="app.html">App</a>
-        </div>
+        <div class="topnav" id="myTopnav">
+            <a href="index.html">Inicio</a>
+            <a href="sort.html">Sort()</a>
+            <a href="reverse.html">Reverse()</a>
+            <a href="includes.html">Includes()</a>
+            <a href="app.html">App</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
     </header>
-    <h2>¿Que es el Metodo Sort?</h2>
-    <main style="display: flex; width: 80%; text-align: center;">
-       
+    <main>
+        <h2>¿Que es el Metodo Sort?</h2>
         <p>
             El método sort() ordena los elementos de un arreglo (array) localmente y devuelve el arreglo ordenado. La ordenación no es necesariamente estable. El modo de ordenación por defecto responde a la posición del valor del string de acuerdo a su valor Unicode.
         </p>
         <img src="java-program-to-sort-the-elements-of-an-array-in-ascending-order.png" alt="sort" style="width: 50%;">
-    </main>
 
-    <div id="Sintaxis">
-        <div class="grid-item">
+
+        <div class="item">
             <h2 id="arreglo-de-cadenas"><strong>Arreglo de Cadenas</strong></h2>
-            <pre class="language-javascript" tabindex="0">
-                <code class="language-javascript">
-                    <span class="token keyword">const equipos = ['Real Madrid', 'Manchester Utd', 'Bayern Munich', 'Juventus'];
-                </code>
-            </pre>
+
+            <code class="language-javascript">
+                <span class="token keyword">const equipos = ['Real Madrid', 'Manchester Utd', 'Bayern Munich', 'Juventus'];
+            </code>
+
             <p>Cuando usamos el método <code>sort()</code>, los elementos se ordenarán en orden ascendente (de la A a la Z) por defecto:</p>
-            <pre class="language-javascript" tabindex="0">
-                <code class="language-javascript">equipos.sort();
-                    <span class="language-javascript">// ['Bayern Munich', 'Juventus', 'Manchester Utd', 'Real Madrid']</span>
-                </code>
-            </pre>
+            <code class="language-javascript">equipos.sort();
+                <span class="language-javascript">// ['Bayern Munich', 'Juventus', 'Manchester Utd', 'Real Madrid']</span>
+            </code>
+
         </div>
     
-        <div class="grid-item">
+        <div class="item">
             <h2 id="arreglo-de-cadenas"><strong>Arreglo de Numeros</strong></h2>
             <pre class="language-javascript" tabindex="0">
                 <code class="language-javascript">
-                    <span class="token keyword">const equipos = ['Real Madrid', 'Manchester Utd', 'Bayern Munich', 'Juventus'];
+                    <span class="token keyword">const equipos = [1, 5, 3, 12, 110];
                 </code>
             </pre>
             <p>Lamentablemente, ordenar números no es tan simple. Si aplicamos el método sort() directamente a un arreglo de números, veremos un resultado inesperado:</p>
             <pre class="language-javascript" tabindex="0">
                 <code class="language-javascript">equipos.sort();
-                    <span class="language-javascript">// ['Bayern Munich', 'Juventus', 'Manchester Utd', 'Real Madrid']</span>
+                    <span class="language-javascript">// [1, 110, 12, 3, 5]</span>
                 </code>
             </pre>
         </div>
     
-        <div class="grid-item">
+        <div class="item">
             <h2 id="arreglo-de-cadenas"><strong>Arreglo de Cadenas</strong></h2>
             <pre class="language-javascript" tabindex="0">
                 <code class="language-javascript">
@@ -72,7 +72,7 @@
             </pre>
         </div>
     
-        <div class="grid-item">
+        <div class="item">
             <h2 id="arreglo-de-cadenas"><strong>Arreglo de Cadenas</strong></h2>
             <pre class="language-javascript" tabindex="0">
                 <code class="language-javascript">
@@ -87,10 +87,8 @@
             </pre>
         </div>
     </div>
-    
-    
- 
-    
+    </main>
+
     <footer>
         <p>Desarrolado por:
             <ol>
@@ -101,5 +99,7 @@
         </p>
 
     </footer>
+
+    <script src="app.js"></script>
 </body>
 </html>
